@@ -1,13 +1,19 @@
-const width = 10
-const height = 5
-const space = width * height
-const newWidth = width - 4
-const newWidth2 = width + 4
-const division = newWidth / newWidth2
-const volume = 2 ** 3 // 2 * 2 * 2
-console.log(volume)
+// Оператори присвоювання
+let age = 18 + 5
+age += 2 // age = age + 2
+age -= 3 //age = age - 3
+age *= 2 //age = age + 2
+age /= 2 // age = age / 2
 
-// Рядки
-const city = 'Київ'
-const street = 'Дарницька'
-console.log(city + ', ' + street + ' ' + 5)
+age++ // age = age + 1
+age-- // age = age - 1
+
+console.log(age)
+
+// Оператори порівняння
+const Peter = 20
+console.log(age > Peter)
+console.log(age >= Peter)
+console.log(age < Peter)
+console.log(age <= Peter)
+console.log(age == Peter)
