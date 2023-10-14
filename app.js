@@ -1,19 +1,14 @@
-// Оператори присвоювання
-let age = 18 + 5
-age += 2 // age = age + 2
-age -= 3 //age = age - 3
-age *= 2 //age = age + 2
-age /= 2 // age = age / 2
+// Порядок операторів
 
-age++ // age = age + 1
-age-- // age = age - 1
+const isSuited = 100 - 10 > 90 - 5
+console.log(isSuited)
 
-console.log(age)
+const a = 6 + 10 / 2
+console.log(a)
 
-// Оператори порівняння
-const Peter = 20
-console.log(age > Peter)
-console.log(age >= Peter)
-console.log(age < Peter)
-console.log(age <= Peter)
-console.log(age == Peter)
+let b
+let c
+
+c = b = 100 + 50 + 30
+console.log(c)
+console.log(b)
