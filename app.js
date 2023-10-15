@@ -1,17 +1,21 @@
-// Шаблонні рядки
-const projectName = 'Сайт магазину'
-const price = 2000
-const author = 'Кривенко Максим'
+// Перетворення типів
+const age = '18'
+console.log(Number(age) + 5)
+console.log(+age + 5)
+console.log(age - 3)
 
-const template = author + ' замовив ' + projectName + ' по ціні ' + price + '$'
-console.log(template)
+const userName = 'Peter'
+console.log(Number(userName) + 5)
 
-const template2 = `${author} замовив ${projectName} по ціні ${price}$`
-console.log(template2)
+console.log(typeof NaN)
 
-const template3 = 'Проект \n' + 'Ціна: ' + price + '$'
-console.log(template3)
+console.log(String(4) + 7)
+console.log(Boolean(1))
+console.log(Boolean(0))
+console.log(Boolean(100))
+console.log(Boolean(-100))
+console.log(Boolean('gjhgjh'))
+console.log(Boolean(''))
 
-const template4 = `Проект
-Ціна: ${price}$`
-console.log(template4)
+const a = 2 + '10'
+console.log(a - 10)
