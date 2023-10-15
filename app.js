@@ -1,14 +1,20 @@
-// Порядок операторів
+// ************* Типи даних ***************
+// number, bigInt, string, boolean, undefined, NaN, null
 
-const isSuited = 100 - 10 > 90 - 5
-console.log(isSuited)
+let a = 5
+let b = 5.6
+console.log(typeof a)
+console.log(typeof b)
+a = 'рядок'
+console.log(typeof a)
+e = 'hjhk'
+console.log(typeof e)
 
-const a = 6 + 10 / 2
-console.log(a)
+let isAdmin = false
+console.log(typeof isAdmin)
 
-let b
-let c
+let c = undefined
+console.log(typeof c)
 
-c = b = 100 + 50 + 30
-console.log(c)
-console.log(b)
+let d = null
+console.log(typeof d == null)
