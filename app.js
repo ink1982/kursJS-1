@@ -1,19 +1,17 @@
 // Шаблонні рядки
-/*
-№16.
-Ваша погодинна ставка 80$ і ви готові працювати
-не більше 5 год. на день в тиждень (крім вихідних).
-До вас звертається замовник і пропонує замовлення на 40 год. роботи.
-Зараз понеділок.
-Ви повинні поїхати через 11 днів.
-Виведіть у консоль:
-	- Boolean змінну, чи встигнете ви взятися за роботу;
-	- Скільки ви за неї попросите.
-*/
+const projectName = 'Сайт магазину'
+const price = 2000
+const author = 'Кривенко Максим'
 
-const payRateUSD = 80
-const projectHours = 40
-const availableHours = (11 - 2) * 5
+const template = author + ' замовив ' + projectName + ' по ціні ' + price + '$'
+console.log(template)
 
-console.log('Чи зможу я працювати? ' + (availableHours > projectHours))
-console.log('Вартість робіт: ' + projectHours * payRateUSD + '$')
+const template2 = `${author} замовив ${projectName} по ціні ${price}$`
+console.log(template2)
+
+const template3 = 'Проект \n' + 'Ціна: ' + price + '$'
+console.log(template3)
+
+const template4 = `Проект
+Ціна: ${price}$`
+console.log(template4)
