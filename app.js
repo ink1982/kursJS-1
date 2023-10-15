@@ -19,3 +19,10 @@ console.log(Boolean(''))
 
 const a = 2 + '10'
 console.log(a - 10)
+// =========== False із інших типів ==============
+
+console.log(Boolean(0))
+console.log(Boolean(''))
+console.log(Boolean(undefined))
+console.log(Boolean(null))
+console.log(Boolean(Number('sx')))
