@@ -38,3 +38,37 @@ if (res > houseCost) {
 } else {
 	console.log('Ми наскладали: ${res}. Купити не зможемо (((');
 }
+
+/*
+	Методом prompt отримайте відповідь від користувача на запитання:
+	"Скільки буде 7 + або - 15?". Якщо відповідь правильна, виведіть у консоль
+	"Успіх", якщо ні - "Ви робот?", якщо він виведе "Я не робот", то також "Успіх".
+*/
+
+const res25 = prompt('Скільки буде 7 + або - 15?');
+
+// Варіянт 1
+switch (true) {
+	case res25 === 'Я не робот':
+	case Number(res25) === 22:
+	case Number(res25) === -8:
+		console.log('Успіх');
+		break;
+	default:
+		console.log('Ви робот!');
+}
+
+// Варіянт 2
+if (res25 === 'Я не робот') {
+	console.log('Успіх');
+} else {
+	const resNum = Number(res25);
+	switch (resNum) {
+		case 22:
+		case -8:
+			console.log('Успіх');
+			break;
+		default:
+			console.log('Ви робот!');
+	}
+}
