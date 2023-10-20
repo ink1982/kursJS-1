@@ -1,12 +1,13 @@
-// if else
-const money = 100;
-const canBuy = money > 50;
+// оператори рівності
+const secretNumber = '7';
 
-if (canBuy) {
-	console.log('Може купити наш продукт');
-} else if (money > 55) {
-	console.log('Куплено mini продукт');
+if (Number(secretNumber) === 7) {
+	console.log('Вгадав жорстко');
 } else {
-	console.log('Не вистачає балансу');
+	console.log('Вгадав не жорстко');
 }
-console.log('Підсумок');
+
+const q = Number(prompt('Введіть число'));
+if (q === 7) {
+	console.log('Вгадав не жорстко');
+}
