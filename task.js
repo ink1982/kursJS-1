@@ -63,3 +63,33 @@ console.log(`Можу купити гру: ${canBuy ? 'Так' : 'Ні'}`);
 // переписати звичайну функцію у стрілкову
 const toPower = (num, power) => num ** power;
 console.log(toPower(2, 3));
+
+/*
+	Користувач:
+	- Вік;
+	- Наявність роботи;
+	- Гроші;
+	Потрібно перевірити, чи зможе він купити новий MacBook за 2000$?
+	Він може брати не тільки свої гроші, а й взяти кредит.
+	Йому дадуть 500$, за умови, шо йому більше 24-х років і він має роботу,
+	100$ - якщо йому просто більше 24-х років і 0$ в інших випадках.
+
+	Напишіть функцію, яка приймає дані користувача і товару і повертає true або false
+*/
+
+function computeCredit(age, hasJob = false) {
+	switch (true) {
+		case age > 24 && hasJob:
+			return 500;
+		case age > 24:
+			return 100;
+		default:
+			return 0;
+	}
+}
+
+function canBuy1(productPrice, age, money, hasJob = false) {
+	const creditMoney = computeCredit(age, hasJob);
+	return productPrice <= money + creditMoney;
+}
+console.log(canBuy1(2000, 25, 1500, true));
