@@ -1,21 +1,19 @@
-// Управління елементами масиву
-const users = ['Аня', 'Віка', 'Катя'];
-console.log(users);
+// Пошук елемента в масиві
+const roles = ['user', 'admin', 'manager'];
 
-users[2] = 'Христина';
-console.log(users);
+const elIndex1 = roles.indexOf('admin');
+console.log(elIndex1);
 
-const arrLength = users.push('Максим');
-console.log(users);
-console.log(arrLength);
+const elIndex2 = roles.indexOf('superUser');
+console.log(elIndex2);
 
-users.unshift('Тарас');
-console.log(users);
+if (roles.indexOf('admin') >= 0) {
+	console.log('Доступ надано');
+}
 
-const el = users.pop();
-console.log(el);
-console.log(users);
+console.log(roles.includes('admin'));
+console.log(roles.includes('superadmin'));
 
-const el2 = users.shift();
-console.log(el2);
-console.log(users);
+if (roles.includes('admin')) {
+	console.log('Доступ надано');
+}
