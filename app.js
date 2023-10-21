@@ -1,13 +1,11 @@
-// Знайомство з функціями
-function logName(name, surname) {
-	console.log(`Моє ім\'я ${name} ${surname}`);
+// анонімні функції
+
+function powerOfTwo(num) {
+	return num * num;
 }
+console.log(powerOfTwo(5));
 
-logName('John', 'Dou');
-
-function countDepositSum(depositInUSD, month, rate) {
-	return depositInUSD * (1 + rate / 12) ** month;
-}
-
-const example1 = countDepositSum(1000, 24, 0.12);
-console.log(example1);
+const powOfTwo = function (num) {
+	return num * num;
+};
+console.log(powOfTwo(6));
