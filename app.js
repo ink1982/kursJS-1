@@ -1,18 +1,19 @@
-//тернарні оператори
-const bmwX3Price = 100000;
-const fordFocusPrice = 10000;
-const budget = 200000;
+// Булева логіка
 
-// let message;
-// if (budget > bmwX3Price) {
-// 	message = 'BMW';
-// } else {
-// 	message = 'Велосипед';
-// }
+const isAdmin = true;
+const canWrite = true;
 
-// let message = budget > bmwX3Price ? 'BMW' :
+console.log(`System file --- ${isAdmin && canWrite}`);
+console.log(`Regular file --- ${isAdmin || canWrite}`);
+console.log(`Invert admin permissions --- ${!isAdmin}`);
 
-let message =
-	budget > bmwX3Price ? 'BMW' : budget > fordFocusPrice ? 'Ford' : 'Велосипед';
+const isEdited = true;
+const isSuperAdmin = true;
 
-console.log(`Я хочу купити ${message}`);
+console.log(
+	`System edited file --- ${isAdmin && canWrite && (!isEdited || isSuperAdmin)}`
+);
+
+let a = 7;
+if (a === -8 || a === 22) {
+}
