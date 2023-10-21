@@ -1,25 +1,21 @@
-// Знайомство з масивами
-const role1 = 'admin';
-const role2 = 'user';
-const role3 = 'superuser';
+// Управління елементами масиву
+const users = ['Аня', 'Віка', 'Катя'];
+console.log(users);
 
-const roles = ['admin', 'user', 'superuser'];
-const userInfo = ['Аня', 25];
-console.log(roles);
-console.log(roles[0]);
+users[2] = 'Христина';
+console.log(users);
 
-console.log(roles.length);
-console.log(roles[roles.length - 1]);
+const arrLength = users.push('Максим');
+console.log(users);
+console.log(arrLength);
 
-console.log(roles.at(-1));
+users.unshift('Тарас');
+console.log(users);
 
-const userAge = [2040 - 2022, 10 > 0 ? 5 : 0];
-console.log(userAge);
+const el = users.pop();
+console.log(el);
+console.log(users);
 
-const userNames = new Array('Тарас', 'Петро', 'Максим', 'Уляна');
-console.log(userNames);
-
-function square(el) {
-	return el * el;
-}
-console.log(square([1, 2, 3]));
+const el2 = users.shift();
+console.log(el2);
+console.log(users);
