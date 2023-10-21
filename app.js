@@ -1,11 +1,9 @@
-// анонімні функції
+// стрілкові функції
 
 function powerOfTwo(num) {
 	return num * num;
 }
 console.log(powerOfTwo(5));
 
-const powOfTwo = function (num) {
-	return num * num;
-};
+const powOfTwo = num => num * num;
 console.log(powOfTwo(6));
