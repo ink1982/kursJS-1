@@ -59,3 +59,7 @@ const canBuy =
 	(balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSelling;
 
 console.log(`Можу купити гру: ${canBuy ? 'Так' : 'Ні'}`);
+
+// переписати звичайну функцію у стрілкову
+const toPower = (num, power) => num ** power;
+console.log(toPower(2, 3));
