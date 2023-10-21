@@ -38,3 +38,24 @@ if (res > houseCost) {
 } else {
 	console.log('Ми наскладали: ${res}. Купити не зможемо (((');
 }
+
+/*
+	Користувач бажає придбати гру у магазині.
+	Він зможе це зробити, якщо:
+	- його баланс більше 1000 (balance), або число бонусів (bonusBalance) більше 100;
+	- його не заблоковано (isBanned);
+	- гра не куплена (isExist);
+	- гар продається (isSelling);
+	Напишіть умову для придбання і виводу у консоль.
+*/
+
+const balance = 100;
+const bonusBalance = 900;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+const canBuy =
+	(balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSelling;
+
+console.log(`Можу купити гру: ${canBuy ? 'Так' : 'Ні'}`);
