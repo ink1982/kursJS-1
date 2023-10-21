@@ -1,9 +1,11 @@
-//параметри по-замовчуванню
-
-function toPower(num, power = 2) {
-	const res = num ** power;
-	return res;
+//умови в середині функцій
+function canAccessWebsite(age) {
+	if (age < 18) {
+		return false;
+	}
+	return true;
 }
+console.log(canAccessWebsite(18));
 
-console.log(toPower(2, 3));
-console.log(toPower(2));
+const canAccessWebsite2 = age => (age < 18 ? 'Ні' : 'Так');
+console.log(canAccessWebsite2(18));
