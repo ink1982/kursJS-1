@@ -1,19 +1,31 @@
-// Пошук елемента в масиві
-const roles = ['user', 'admin', 'manager'];
+// Slice, splice, concat, reverse
+const roles = ['user', 'admin', 'manager', 'superuser'];
 
-const elIndex1 = roles.indexOf('admin');
-console.log(elIndex1);
+const res = roles.slice(2);
+console.log(roles);
+console.log(res);
 
-const elIndex2 = roles.indexOf('superUser');
-console.log(elIndex2);
+const res1 = roles.slice(2, 3);
+console.log(res);
 
-if (roles.indexOf('admin') >= 0) {
-	console.log('Доступ надано');
-}
+const res2 = roles.slice(-2);
+console.log(res);
 
-console.log(roles.includes('admin'));
-console.log(roles.includes('superadmin'));
+const res3 = roles.slice(1, -1);
+console.log(res3);
+// ===================================
 
-if (roles.includes('admin')) {
-	console.log('Доступ надано');
-}
+// const res4 = roles.splice(2, 1);
+// console.log(res4);
+
+// const res5 = roles.splice(-1);
+// console.log(res5);
+
+// ==================================
+
+const res6 = roles.reverse();
+console.log(roles);
+
+const newRoles = ['sysadmin', 'developer'];
+const res7 = roles.concat(newRoles);
+console.log(res7);
