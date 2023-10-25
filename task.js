@@ -93,3 +93,47 @@ function canBuy1(productPrice, age, money, hasJob = false) {
 	return productPrice <= money + creditMoney;
 }
 console.log(canBuy1(2000, 25, 1500, true));
+
+/*
+Даний список завдань:
+	const tasks = ['Завдання 1']
+	Створити функції:
+	- добавити завдання вкінець;
+	- видалення завдання по назві;
+	- перенесення завдання на початок списку по назві.
+Завжди мутуємо вихідний масив.
+*/
+
+const tasks = ['Завдання 1'];
+
+function Add(task) {
+	tasks.push(task);
+}
+
+function Remove(task) {
+	const index = tasks.indexOf(task);
+	if (index === -1) {
+		return;
+	}
+	tasks.splice(index, 1);
+}
+
+function Prioritize(task) {
+	const index = tasks.indexOf(task);
+	if (index === -1) {
+		return;
+	}
+	const oldTask = tasks[index];
+	tasks.splice(index, 1);
+	tasks.unshift(oldTask);
+}
+
+Add('Завдання 2');
+Add('Завдання 3');
+console.log(tasks);
+
+Remove('Завдання 2');
+console.log(tasks);
+
+Prioritize('Завдання 4');
+console.log(tasks);
