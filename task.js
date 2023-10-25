@@ -135,3 +135,26 @@ console.log(tasks);
 
 Prioritize('Завдання 4');
 console.log(tasks);
+
+/*
+	Дано випадковий url: 'https://purpleschool.ru/cource/javascript'
+	Потрібно створити функцію, яка виводить в консоль:
+	- Протокол (https);
+	- Доменне ім'\я (purpleschool.ru);
+	- Шлях в середині сайту (/course/javascript)
+*/
+
+const url = 'https://purpleschool.ru/cource/javascript';
+function getUrlParts(url) {
+	const [protocol, _, host, ...path] = url.split('/');
+	if (protocol === 'https:' || protocol === 'http:') {
+		if (!host.includes('.')) {
+			return;
+		}
+		console.log(protocol, _, host, path);
+		console.log(`Протокол: ${protocol.split(':')[0]}`);
+		console.log(`Доменне ім'\я: ${host}`);
+		console.log(`Шлях в середині сайту: /${path.join('/')}`);
+	}
+}
+getUrlParts(url);
