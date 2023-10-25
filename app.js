@@ -1,14 +1,5 @@
-// деструктуризація
-const userData = ['Антон', 18, 'Львів'];
+// rest - оператор
 
-function getData() {
-	return ['Антон', 18, 'Львів'];
-}
-
-// const userName = userData[0];
-// const age = userData[1];
-// const city = userData[2];
-
-const [userName, age, city] = getData();
-
-console.log(userName, age, city);
+const data = [1, 2, 3, 4, 5, 6];
+const [one, two, ...others] = data;
+console.log(one, two, others);
