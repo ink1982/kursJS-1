@@ -158,3 +158,20 @@ function getUrlParts(url) {
 	}
 }
 getUrlParts(url);
+
+/* 
+	Задача вивести в консоль рядок "Я люблю JS !" з масиву,
+	проходячи циклом у зворотному порядку, не використовуючи метод reverse.
+	const arr = ['!', 'JS', 'люблю', 'Я']
+*/
+
+const arr = ['!', 'JS', 'люблю', 'Я'];
+const resultArray = [];
+// for (let i = arr.length; i >= 0; i--) {
+// 	console.log(arr[i]);
+// }
+
+for (let i = arr.length - 1; i >= 0; i--) {
+	resultArray.push(arr[i]);
+}
+console.log(resultArray.join(' '));
