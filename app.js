@@ -1,18 +1,31 @@
-// Цикл в циклі
-// for (let i = 1; i < 5; i++) {
-// 	console.log(`Цикл 1 - ${i}`);
-// 	for (let k = 1; k < 5; k++) {
-// 		console.log(`Цикл 2 - ${k}`);
-// 	}
+// Цикл while
+// for (let i = 0; i < 5; i++) {
+// 	console.log(`Вивід - ${i}`);
 // }
 
-const tasks = [
-	[1, 'Задача 1'],
-	[2, 'Задача 2'],
-];
+// let i = 1;
+// while (i < 5) {
+// 	console.log(`Вивід - ${i}`);
+// 	i++;
+// }
 
-for (let i = 0; i < tasks.length; i++) {
-	for (let k = 0; k < tasks[i].length; k++) {
-		console.log(tasks[i][k]);
+const arr = [1, 4, 8, 7];
+
+for (let i = 0; i < arr.length; i++) {
+	if (arr[i] > 5) {
+		break;
 	}
+	console.log(arr[i]);
 }
+
+let i = 0;
+while (arr[i] <= 5 && i < arr.length) {
+	console.log(arr[i]);
+	i++;
+}
+
+let j = 0;
+do {
+	console.log(j);
+	j++;
+} while (j < 0);
