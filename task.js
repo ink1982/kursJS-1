@@ -175,3 +175,58 @@ for (let i = arr.length - 1; i >= 0; i--) {
 	resultArray.push(arr[i]);
 }
 console.log(resultArray.join(' '));
+
+/*
+	Вивантажені операції користувача
+	const operations = [1000, -700, 300, -500, 10000];
+	а також початковий баланс в 100$
+	Необхідно створити функції розрахунку:
+	- підсумкового балансу,
+	- наявності від'ємного балансу (якщо після чергової операції баланс < 0, то видавати false),
+	- розрахунок середнього прибутку і видатку
+*/
+const operations = [1000, -700, 300, -500, 10000];
+const startingBalance = 100;
+
+function getBalance(arrayOfOperations, initialBalance) {
+	let balance = initialBalance;
+	for (const element of arrayOfOperations) {
+		balance += element;
+	}
+	return balance;
+}
+console.log(getBalance(operations, startingBalance));
+
+function checkOperations(arrayOfOperations, initialBalance) {
+	let balance = initialBalance;
+	let isOk = true;
+	for (const element of arrayOfOperations) {
+		balance += element;
+		if (balance < 0) {
+			isOk = false;
+			break;
+		}
+	}
+	return isOk;
+}
+console.log(checkOperations(operations, startingBalance));
+
+function averageOperations(arrayOfOperations) {
+	let positiveCount = 0;
+	let positiveSum = 0;
+	let negativeCount = 0;
+	let negativeSum = 0;
+
+	for (const element of arrayOfOperations) {
+		if (element > 0) {
+			positiveCount++;
+			positiveSum += element;
+		}
+		if (element < 0) {
+			negativeCount++;
+			negativeSum += element;
+		}
+	}
+	return [positiveSum / positiveCount, negativeSum / negativeCount];
+}
+console.log(averageOperations(operations));
