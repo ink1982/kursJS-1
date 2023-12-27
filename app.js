@@ -1,18 +1,21 @@
-// map
-const transactionInUSD = [10, -7, 50, -10, 100];
+// filter
+const operations = [100, -20, 7, 50];
+// const positiveOperations = [];
+// for (const operation of operations) {
+// 	if (operation > 0) {
+// 		positiveOperations.push(operation);
+// 	}
+// }
+// console.log(positiveOperations);
 
-const transactionInGRN = [];
-for (const transaction of transactionInUSD) {
-	transactionInGRN.push(transaction * 41.0);
-}
-
-// console.log(transactionInUSD);
-// console.log(transactionInGRN);
-
-const transactionInGRN2 = transactionInUSD.map((transaction, i) => {
-	console.log(i);
-	return transaction * 41;
+const positiveOperations = operations.filter(operation => {
+	return operation > 0;
 });
+console.log(positiveOperations);
 
-console.log(transactionInUSD);
-console.log(transactionInGRN2);
+const positiveGRNOperations = operations
+	.filter(operation => {
+		return operation > 0;
+	})
+	.map(operation => operation * 41);
+console.log(positiveGRNOperations);
