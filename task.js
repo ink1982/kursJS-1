@@ -159,7 +159,7 @@ function getUrlParts(url) {
 }
 getUrlParts(url);
 
-/* 
+/*
 	Задача вивести в консоль рядок "Я люблю JS !" з масиву,
 	проходячи циклом у зворотному порядку, не використовуючи метод reverse.
 	const arr = ['!', 'JS', 'люблю', 'Я']
@@ -230,3 +230,22 @@ function averageOperations(arrayOfOperations) {
 	return [positiveSum / positiveCount, negativeSum / negativeCount];
 }
 console.log(averageOperations(operations));
+// =======================================
+// Вивід змін у цінах
+/*
+	Маємо масив зміни цін prices, де всередині 1-й елемент масиву є ціною в момент X
+	2-й елемент - ціною в момент Y.
+	Необхідно перетворити дані у масив, де буде відображено тільки позитивні зміни цін:
+	[100, 150]
+*/
+
+const prices = [
+	[100, 200],
+	[120, 100],
+	[200, 350],
+];
+
+const result = prices
+	.map(product => product[1] - product[0])
+	.filter(price => price > 0);
+console.log(result);
