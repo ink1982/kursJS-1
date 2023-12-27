@@ -1,21 +1,19 @@
-// filter
-const operations = [100, -20, 7, 50];
-// const positiveOperations = [];
-// for (const operation of operations) {
-// 	if (operation > 0) {
-// 		positiveOperations.push(operation);
-// 	}
-// }
-// console.log(positiveOperations);
+// Метод reduce
+const operations = [100, -20, 7, -30, 50];
 
-const positiveOperations = operations.filter(operation => {
-	return operation > 0;
-});
-console.log(positiveOperations);
+let balance = 0;
+for (const operation of operations) {
+	balance += operation;
+}
+// console.log(balance);
 
-const positiveGRNOperations = operations
-	.filter(operation => {
-		return operation > 0;
-	})
-	.map(operation => operation * 41);
-console.log(positiveGRNOperations);
+const minElement = operations.reduce((acc, operation) => {
+	if (operation > acc) {
+		return acc;
+	} else {
+		return operation;
+	}
+}, 0);
+console.log(minElement);
+// 0 - acc = 0, value = 100
+// 1 - acc = 100, value = -20
