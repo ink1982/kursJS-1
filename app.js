@@ -26,23 +26,13 @@
 // console.log(res);
 
 // res = calculate(3, 5, power);
-// console.log(res);
+// forEach
+const score = [5, 10, 0, 15];
 
-// Повернення ф-ції
-// function power(pow) {
-// 	return function (num) {
-// 		return num ** pow;
-// 	};
+// for (const [i, el] of score.entries()) {
+// 	console.log(`Раунд ${i + 1}: ${el}`);
 // }
-const power = pow => num => num ** pow;
 
-const powerOfTwo = power(2);
-console.log(powerOfTwo(5));
-console.log(powerOfTwo(10));
-
-const powerOfThree = power(3);
-console.log(powerOfThree(5));
-
-console.log(power(5)(4));
-
-// Стрілкові функції
+score.forEach((el, i) => {
+	console.log(`Раунд ${i + 1}: ${el}`);
+});
