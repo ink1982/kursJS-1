@@ -24,6 +24,8 @@ a {
 .container {
 	max-width: 1000px;
 	margin: 30px auto;
+	display: flex;
+	justify-content: space-around;
 }
 
 div.section {

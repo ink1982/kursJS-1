@@ -264,3 +264,17 @@ const avg = myArr.reduce((acc, el, i) => {
 }, 0);
 
 console.log(avg);
+// ================================================
+/*
+	Написати функцію, яка повертає true, якщо елемент наявний,
+	і - false, якщо ні.
+*/
+const array = [2, 4, 4, 10, 20];
+
+function some(arr, element) {
+	const res = arr.find(el => el === element);
+	return res == undefined ? false : true;
+}
+console.log(some(array, 0));
+
+console.log(array.some(el => el === 0));
