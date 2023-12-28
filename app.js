@@ -1,16 +1,12 @@
-// Методи find & findIndex
-const arr = [2, 4, 4, 10];
+// Методи flat & flatMap
+const prices = [
+	[2, 4],
+	[3, 4],
+	[10, [20, 50]],
+];
 
-let elGT5;
-// for (const el of arr) {
-// 	if (el > 5) {
-// 		elGT5 = el;
-// 		break;
-// 	}
-// }
-// console.log(elGT5);
+const res = prices.flat(2);
+console.log(res);
 
-elGT5 = arr.find(el => el > 5);
-elGT5Index = arr.findIndex(el => el > 5);
-console.log(elGT5);
-console.log(elGT5Index);
+const res2 = prices.flatMap(el => el.concat([1]));
+console.log(res2);
