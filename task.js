@@ -249,3 +249,18 @@ const result = prices
 	.map(product => product[1] - product[0])
 	.filter(price => price > 0);
 console.log(result);
+// ===============================================
+/*
+	Знайти середнє значення послідовності числа за допомогою reduce
+*/
+
+const myArr = [2, 4, 4, 10];
+const avg = myArr.reduce((acc, el, i) => {
+	if (i != myArr.length - 1) {
+		return acc + el;
+	} else {
+		return (acc + el) / arr.length;
+	}
+}, 0);
+
+console.log(avg);
