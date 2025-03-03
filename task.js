@@ -33,7 +33,7 @@ const houseCost = 13500;
 const res = deposit * (1 + rate / 12) ** 24;
 if (res > houseCost) {
 	console.log(
-		`Ми наскладали: ${res}. Можемо купити. Залишок ${res - houseCost}`
+		`Ми наскладали: ${res}. Можемо купити. Залишок ${res - houseCost}`,
 	);
 } else {
 	console.log('Ми наскладали: ${res}. Купити не зможемо (((');
@@ -278,3 +278,14 @@ function some(arr, element) {
 console.log(some(array, 0));
 
 console.log(array.some(el => el === 0));
+
+// Витягнути ім'я і прізвище в окремі змінні
+const fullUserName = 'Назар aka Terminator Бандурович';
+
+const userName = fullUserName.slice(0, fullUserName.indexOf(' '));
+console.log(userName);
+const userSureName = fullUserName.slice(
+	fullUserName.lastIndexOf(' ')+1,
+	fullUserName.length,
+);
+console.log(userSureName);
